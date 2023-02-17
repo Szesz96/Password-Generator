@@ -1,0 +1,114 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1C1C1C;
+}
+
+.container{
+    width: 550px;
+    height: 550px;
+    border-radius: 8px;
+    background-color: #1F2937;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 80%;
+    height: 100%;
+    padding: 0 52px;
+}
+
+.text {
+    width: 355px;
+    height: 80px;
+}
+
+.text h1 {
+    margin: 0;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.text h1 span {
+    color: #4ADF86;
+}
+
+.text p {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #D5D4D8;
+}
+
+.text .generator-btn {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    width: 190px;
+    height: 42px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    color: #ffffff;
+    background-color: #4ADF86;
+    font-weight: bold;
+    transition: color .5s
+}
+
+.text .generator-btn:hover {
+    color: #273549;
+}
+
+.hr {
+    border: 1px solid #2F3E53;
+    width: 440px;
+    margin-top: 130px;
+}
+
+.generated-passwords{
+    width: 440px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.generated-passwords div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 211px;
+    height: 36px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color:  #4ADF86;
+    background-color: #273549;
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container .fa-copy{
+    position: absolute;
+    padding: 8px;
+    right: 2px;
+    cursor: pointer;
+    color: #5e6f88;
+    transition: color .3s;
+}
+
+.password-container .fa-copy:hover {
+    color: white;
+}
+
