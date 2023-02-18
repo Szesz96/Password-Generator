@@ -112,6 +112,10 @@ body {
     color: white;
 }
 
+.password-container .fa-copy:active {
+    color: #4ADF86;
+}
+
 @media only screen and (max-width: 600px) {
     .container {
       width: 100%;
