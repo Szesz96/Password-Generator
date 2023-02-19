@@ -97,12 +97,14 @@ const pass2 = document.querySelector('.second-password');
 const btn = document.querySelector('.generator-btn');
 const copyBtn1 = document.querySelector('.copy-btn1')
 const copyBtn2 = document.querySelector('.copy-btn2')
+const selectLength = document.querySelector('.pass-length')
 
 function getPasswords() {
 	let newPassword1 = [];
 	let newPassword2 = [];
+	let passLength = selectLength.value
 
-	for (let i = 0; i < 15; i++) {
+	for (let i = 0; i < passLength; i++) {
 		newPassword1.push(characters[Math.floor(Math.random() * characters.length)]);
 		newPassword2.push(characters[Math.floor(Math.random() * characters.length)]);
 	}

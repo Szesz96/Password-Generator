@@ -20,6 +20,23 @@
             <div class="text">
                 <h1>Generate a <span>random password</span></h1>
                 <p>Never use an insecure password again.</p>
+                <div>
+                    <select class="pass-length" name="length" id="pass">
+                        <option value="8" selected disabled>Select the password length</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                    <div class="check">
+                        <input type="checkbox" id="symbols" name="symbols">
+                        <label for="symbols">No symbols</label>
+                    </div>
+                </div>
                 <button class="generator-btn">Generate passwords</button>
             </div>
             <div class="hr"></div>
