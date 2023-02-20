@@ -55,6 +55,7 @@ body {
 
 .text .pass-length {
     padding: 10px;
+    font-size: 18px;
     font-weight: bold;
     border: none;
     color: white;
@@ -64,8 +65,9 @@ body {
     background-color: #273549;
 }
 
-.check{
+.check {
     color: white;
+    font-size: 20px;
     width: fit-content;
     margin-top: 20px;
 }

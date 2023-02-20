@@ -95,31 +95,49 @@ const characters = [
 const pass1 = document.querySelector('.first-password');
 const pass2 = document.querySelector('.second-password');
 const btn = document.querySelector('.generator-btn');
-const copyBtn1 = document.querySelector('.copy-btn1')
-const copyBtn2 = document.querySelector('.copy-btn2')
-const selectLength = document.querySelector('.pass-length')
+const copyBtn1 = document.querySelector('.copy-btn1');
+const copyBtn2 = document.querySelector('.copy-btn2');
+const selectLength = document.querySelector('.pass-length');
+const check = document.querySelector('.checkbox');
 
 function getPasswords() {
 	let newPassword1 = [];
 	let newPassword2 = [];
-	let passLength = selectLength.value
+	let passLength = selectLength.value;
 
 	for (let i = 0; i < passLength; i++) {
-		newPassword1.push(characters[Math.floor(Math.random() * characters.length)]);
-		newPassword2.push(characters[Math.floor(Math.random() * characters.length)]);
+		if (check.checked) {
+			let shortCharacters = characters.slice(0, 62)
+
+			newPassword1.push(
+				shortCharacters[Math.floor(Math.random() * shortCharacters.length)]
+			);
+			newPassword2.push(
+				shortCharacters[Math.floor(Math.random() * shortCharacters.length)]
+			);
+		} else {
+			newPassword1.push(
+				characters[Math.floor(Math.random() * characters.length)]
+			);
+			newPassword2.push(
+				characters[Math.floor(Math.random() * characters.length)]
+			);
+		}
 	}
 
 	pass1.textContent = newPassword1.toString().replaceAll(',', '');
 	pass2.textContent = newPassword2.toString().replaceAll(',', '');
 }
 
-function copyPassword1(){
-    navigator.clipboard.writeText(pass1.textContent)
+function copyPassword1() {
+	navigator.clipboard.writeText(pass1.textContent);
 }
-function copyPassword2(){
-    navigator.clipboard.writeText(pass2.textContent)
+function copyPassword2() {
+	navigator.clipboard.writeText(pass2.textContent);
 }
 
 btn.addEventListener('click', getPasswords);
-copyBtn1.addEventListener('click', copyPassword1)
-copyBtn2.addEventListener('click', copyPassword2)
+copyBtn1.addEventListener('click', copyPassword1);
+copyBtn2.addEventListener('click', copyPassword2);
+
+console.log(check.value);
